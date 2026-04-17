@@ -1,0 +1,31 @@
+name: agentcore
+description: "AWS Bedrock AgentCore Memory with primary storage mode"
+version: "1.0.0"
+author: "Hermes Agent Team"
+type: memory_provider
+
+# Plugin configuration
+config:
+  primary_mode: true  # Enable by default for self-contained operation
+
+# Dependencies
+dependencies:
+  - bedrock-agentcore
+
+# Features
+features:
+  - semantic_search
+  - user_preferences
+  - conversation_summaries
+  - episodic_memory
+  - ha_backup
+  - primary_storage
+
+# Documentation
+docs:
+  setup_url: "https://docs.aws.amazon.com/bedrock/latest/userguide/agentcore-memory.html"
+  examples:
+    - name: "Basic setup"
+      description: "Set AGENTCORE_MEMORY_ID environment variable"
+    - name: "Configuration file"
+      description: "Use ~/.hermes/agentcore_memory.json for settings"
